@@ -13,7 +13,7 @@ const AddService = () => {
         formData.append('servImg', serviceInfo.servImg);
         formData.append('servDescription', serviceInfo.servDescription)
 
-        fetch('http://localhost:5000/addService', {
+        fetch('https://calm-headland-59895.herokuapp.com/addService', {
             method: 'POST',
             body: formData
         })

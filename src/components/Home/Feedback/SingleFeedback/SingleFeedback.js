@@ -1,11 +1,19 @@
 import React from 'react';
 import classes from './singleFeedback.module.css'
 const SingleFeedback = (props) => {
-    
+    // console.log(props)
     const {reviewer, designation, feedback, reviewerImg} = props.reviewInfo
-   
+    // console.log(`[reviewerImg] ${reviewerImg}`)
     let imageLink;
-    
+    // if(reviewerImg.split('URL--')[1]) {
+    //     // console.log(reviewerImg.split('URL--')[1])
+    //    let imageLink = reviewerImg.split('URL--')[1];
+    //     console.log(imageLink)
+    // } 
+    // if( reviewerImg.split('URL--')[1]=== undefined) {
+    //    let imageLink = `${reviewerImg}`;
+    //     console.log(imageLink)
+    // }
     return (
         <div className={classes.singleFeedbackContainer}>
             <div className={classes.clientInfo}>

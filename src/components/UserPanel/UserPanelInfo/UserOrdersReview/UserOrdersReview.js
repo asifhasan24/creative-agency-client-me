@@ -15,7 +15,7 @@ const UserOrdersReview = () => {
 
     const handleFormSubmit = e => {
 
-        fetch('http://localhost:5000/addUserReview', {
+        fetch('https://calm-headland-59895.herokuapp.com/addUserReview', {
             method: 'POST',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify(review)

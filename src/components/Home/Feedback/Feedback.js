@@ -9,7 +9,7 @@ const Feedback = () => {
     
     const [loading, setLoading] = useState(true);
     useEffect( () => { 
-        fetch('http://localhost:5000/allReviews')
+        fetch('https://calm-headland-59895.herokuapp.com/allReviews')
         .then( res => res.json())
         .then( data => {
             const newReviews = [...data];

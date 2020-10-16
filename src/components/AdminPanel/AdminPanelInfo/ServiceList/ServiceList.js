@@ -9,7 +9,7 @@ const ServiceList = () => {
     const [orders, setOrders] = useState([]);
     const [loading, setLoading] = useState(true);
     useEffect(() => {
-        fetch('http://localhost:5000/allOrders')
+        fetch('https://calm-headland-59895.herokuapp.com/allOrders')
             .then(res => res.json())
             .then(data => {
                 const newOrders = [...data];
@@ -24,7 +24,7 @@ const ServiceList = () => {
         const status = {
             updatedStatus: e.target.value
         }
-        fetch(`http://localhost:5000/updateStatus/${order._id}`, {
+        fetch(`https://calm-headland-59895.herokuapp.com/updateStatus/${order._id}`, {
             method: 'PATCH',
             headers: { 'Content-type': 'application/json' },
             body: JSON.stringify(status)

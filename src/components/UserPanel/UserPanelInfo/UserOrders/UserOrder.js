@@ -12,7 +12,7 @@ const UserOrder = () => {
     const serviceIdObject = useParams()
     sessionStorage.setItem('selectedServiceId', serviceIdObject.serviceId)
     useEffect( () => {
-        fetch(`http://localhost:5000/userPanel/orders/${serviceIdObject.serviceId}`)
+        fetch(`https://calm-headland-59895.herokuapp.com/userPanel/orders/${serviceIdObject.serviceId}`)
         .then( res => res.json())
         .then( data => {
             const serviceInfo = {...data}
@@ -39,7 +39,7 @@ const UserOrder = () => {
     }
     const handleFormSubmit = e => {
 
-        fetch('http://localhost:5000/placeOrder', {
+        fetch('https://calm-headland-59895.herokuapp.com/placeOrder', {
             method: 'POST',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify(order)

@@ -8,7 +8,7 @@ const AdminPanel = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [isAdmin, setIsAdmin] = useState(false)
     useEffect(() => {
-        fetch(`http://localhost:5000/isAdmin`, {
+        fetch(`https://calm-headland-59895.herokuapp.com/isAdmin`, {
             method: 'POST',
             headers: { 'Content-type': 'application/json' },
             body: JSON.stringify(loggedInUser)

@@ -38,7 +38,7 @@ const SingleOrder = (props) => {
             <div className={classes.orderedHeader}>
                 {
                     props.orderInfo.image? <img className={classes.serviceIcon} src={`data:image/png;base64,${props.orderInfo.image.img}`} alt="backup" /> : 
-                    <img src={`http://localhost:5000/${servImg}`} className={classes.serviceIcon} alt=""/>
+                    <img src={`https://calm-headland-59895.herokuapp.com/${servImg}`} className={classes.serviceIcon} alt=""/>
                 }
                 <span style={style}>{status}</span>
             </div>

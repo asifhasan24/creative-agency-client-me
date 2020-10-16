@@ -15,7 +15,7 @@ const MakeAdmin = () => {
 
 
     const handleFormSubmit = e => {
-        fetch('http://localhost:5000/addAdmin', {
+        fetch('https://calm-headland-59895.herokuapp.com/addAdmin', {
             method: 'POST',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify(email)
