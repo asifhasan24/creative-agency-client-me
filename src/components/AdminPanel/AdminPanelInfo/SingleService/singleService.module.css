@@ -1,0 +1,12 @@
+.rowStyle {
+    font-weight: 600;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+@media only screen and (max-width: 991px) {
+    .adminRowStyle span {
+        font-size: 13px;
+        
+    }
+}

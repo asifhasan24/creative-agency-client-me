@@ -1,0 +1,69 @@
+.userOrdersForm {
+    padding: 30px;
+    background-color: #F4F7FC;
+}
+.userOrdersForm input{
+    width: 90%;
+    height: 60px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+.userOrdersForm .orderSubmit {
+    width: 170px;
+    height: 60px;
+    background: #111430;
+    text-align: center;
+    color: white;
+}
+.userOrdersForm textarea {    
+    width: 90%;
+    border:none;
+    padding: 10px;
+    height: 100px;  
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.userOrdersForm button {
+    background: #DEFFED !important;
+    border: 1px solid #009444 !important;
+    box-sizing: border-box !important;
+    border-radius: 5px;
+    width: 80%;
+    color: #009444 !important;
+    height: 60px;
+}
+.userOrdersForm button.reviewSubmitBtn {
+    background: #111430 !important;
+    width: 150px;
+    border: none !important;
+    color: white !important;
+}
+
+.serviceIcon {
+    width: 74px;
+    height: 74px;
+}
+.orderDescription h6 {
+    font-size: 20px;
+    font-weight: 700;
+}
+.orderDescription p {
+    font-weight: 300;
+}
+.servicesContainer {
+    padding: 30px;
+    background: #F4F7FC;
+}
+.orderedHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 13px;
+}
+.singleOrderContainer {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}

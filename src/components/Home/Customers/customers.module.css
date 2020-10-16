@@ -1,0 +1,17 @@
+.customersContainer {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 100px;
+}
+.customersContainer img {
+    width: 161px;
+    max-width: 100%;
+    height: 51px;
+    opacity: 0.4;
+    margin: 20px;
+}
+@media only screen and (max-width: 767px) {
+    .customersContainer img {
+        width: 115px
+    }
+}
