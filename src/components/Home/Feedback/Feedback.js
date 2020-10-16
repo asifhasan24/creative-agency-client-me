@@ -9,7 +9,7 @@ const Feedback = () => {
     
     const [loading, setLoading] = useState(true);
     useEffect( () => { 
-        fetch('http://localhost:8080/allReviews')
+        fetch('http://localhost:5000/allReviews')
         .then( res => res.json())
         .then( data => {
             const newReviews = [...data];
@@ -18,7 +18,7 @@ const Feedback = () => {
             setLoading(false)
         })
     }, [])
-    // console.log(`[reviews] ${reviews[0]}`);
+
     return (
         <Container style={{marginBottom: '100px'}}>
             <h2 style={{textAlign: 'center',marginTop: '60px', marginBottom: '50px'}}>Clients <span className="brandText">Feedback</span></h2>

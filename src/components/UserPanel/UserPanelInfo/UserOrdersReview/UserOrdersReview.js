@@ -15,7 +15,7 @@ const UserOrdersReview = () => {
 
     const handleFormSubmit = e => {
 
-        fetch('http://localhost:8080/addUserReview', {
+        fetch('http://localhost:5000/addUserReview', {
             method: 'POST',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify(review)

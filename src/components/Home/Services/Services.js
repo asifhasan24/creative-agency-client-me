@@ -9,17 +9,16 @@ const Services = () => {
     const [loading, setLoading] = useState(true);
     const [services, setServices] = useState([]);
     useEffect( () => {
-        fetch('http://localhost:8080/allServices')
+        fetch('http://localhost:5000/allServices')
         .then( res => res.json())
         .then ( data => {
             const newServices = [...data];
-            // console.log(newServices)
+            
             setServices(newServices)
             setLoading(false)
         })
     }, [])
 
-    // const spinnerStyle = { position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)" };
     
     return (
         <Container style={{marginBottom: '100px'}}>

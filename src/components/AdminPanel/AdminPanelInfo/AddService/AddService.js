@@ -13,7 +13,7 @@ const AddService = () => {
         formData.append('servImg', serviceInfo.servImg);
         formData.append('servDescription', serviceInfo.servDescription)
 
-        fetch('http://localhost:8080/addService', {
+        fetch('http://localhost:5000/addService', {
             method: 'POST',
             body: formData
         })

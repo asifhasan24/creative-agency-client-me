@@ -34,6 +34,8 @@ function App() {
           <PrivateRoute path="/userPanel">
             <UserPanel></UserPanel>
           </PrivateRoute>
+             
+
           <Route exact path="/">
             <Home></Home>
           </Route>

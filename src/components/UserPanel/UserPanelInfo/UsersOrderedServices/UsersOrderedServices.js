@@ -13,7 +13,7 @@ const UsersOrderedServices = () => {
     const [orderedServices, setOrderedServices] = useState([]);
     const [loading, setLoading] = useState(true);
     useEffect( () => {
-        fetch(`http://localhost:8080/orders/${loggedInUser.email}`)
+        fetch(`http://localhost:5000/orders/${loggedInUser.email}`)
         .then( res => res.json())
         .then( data => {
             const orders = [...data]

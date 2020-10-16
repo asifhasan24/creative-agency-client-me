@@ -3,7 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import classes from './customers.module.css'
 
 const Customers = () => {
-    // className={classes.customersContainer}
+ 
     return (
         <Container>
             <Row className={`${classes.customersContainer} align-items-center`}>

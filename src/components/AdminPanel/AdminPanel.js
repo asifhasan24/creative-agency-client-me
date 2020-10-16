@@ -8,7 +8,7 @@ const AdminPanel = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [isAdmin, setIsAdmin] = useState(false)
     useEffect(() => {
-        fetch(`http://localhost:8080/isAdmin`, {
+        fetch(`http://localhost:5000/isAdmin`, {
             method: 'POST',
             headers: { 'Content-type': 'application/json' },
             body: JSON.stringify(loggedInUser)
@@ -21,7 +21,7 @@ const AdminPanel = () => {
 
     }, [])
     const fillerText = (
-        <h2>This page is available to admins only.</h2>
+        <h2> available for admins .</h2>
     )
     return (
 

@@ -15,7 +15,7 @@ const MakeAdmin = () => {
 
 
     const handleFormSubmit = e => {
-        fetch('http://localhost:8080/addAdmin', {
+        fetch('http://localhost:5000/addAdmin', {
             method: 'POST',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify(email)
