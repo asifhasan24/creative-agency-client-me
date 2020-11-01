@@ -1,50 +1,62 @@
-import React from 'react';
-// import Home from './components/Home/Home/Home'
+import React, { createContext, useState } from 'react';
 import './App.css';
+import Home from './components/Home/Home/Home';
+import Login from './components/Login/Login';
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
 } from "react-router-dom";
-import Home from './components/Home/Home';
-import UserPanel from './components/UserPanel/UserPanel';
-import { createContext } from 'react';
-import { useState } from 'react';
-import Login from './components/Login/Login';
-import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
-import AdminPanel from './components/AdminPanel/AdminPanel';
+import NoMatch from './components/NoMatch/NoMatch';
+import AddServices from './components/AddServices/AddServices';
+import AddReview from './components/AddReview/AddReview';
+import PlaceOrder from './components/PlaceOrder/PlaceOrder';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import CustomerStatus from './components/CustomerStatus/CustomerStatus';
+import AddAdmin from './components/AddAdmin/AddAdmin';
+import AdminServiceList from './components/AdminServiceList/AdminServiceList';
 
-export const UserContext = createContext();
+export const userInfo = createContext()
 function App() {
-
-  const [loggedInUser, setLoggedInUser] = useState({});
+  const [loggedInUser, setLoggedInUser] = useState([])
   return (
-    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+    <userInfo.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
         <Switch>
-          <Route path="/home">
-            <Home></Home>
+          <Route exact path='/'>
+            <Home />
           </Route>
-          <Route path="/login">
-            <Login></Login>
+          <Route path='/home'>
+            <Home />
           </Route>
-          <PrivateRoute path="/adminPanel">
-            <AdminPanel></AdminPanel>
+          <Route path='/login'>
+            <Login />
+          </Route>
+          <Route path='/Addservices'>
+            <AddServices />
+          </Route>
+          <Route path='/review'>
+            <AddReview />
+          </Route>
+          <Route path='/customerServicesList'>
+            <CustomerStatus />
+          </Route>
+          <Route path='/makeAdmin'>
+            <AddAdmin />
+          </Route>
+          <Route path='/adminServicesList'>
+            <AdminServiceList />
+          </Route>
+          <PrivateRoute path='/customerOrder/:_id'>
+            <PlaceOrder />
           </PrivateRoute>
-          <PrivateRoute path="/userPanel">
-            <UserPanel></UserPanel>
-          </PrivateRoute>
-             
-
-          <Route exact path="/">
-            <Home></Home>
-          </Route>
-          <Route path="*">
-            <Home></Home>
+          <Route path='*'>
+            <NoMatch />
           </Route>
         </Switch>
       </Router>
-    </UserContext.Provider>
+
+    </userInfo.Provider>
   );
 }
 

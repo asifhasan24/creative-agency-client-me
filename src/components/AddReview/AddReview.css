@@ -1,0 +1,40 @@
+.inp-name{
+    height: 40px;
+    width: 60%;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.inp-descrip{
+    width: 60%;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.btn-send{
+    padding: 10px;
+    border-radius: 10px;
+}
+.inp{
+   
+    width: 350px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+.review-level{
+    background-color: #deffed;
+    color: #169e55;
+    padding: 5px 10px;
+    border-radius: 7px;
+    cursor: pointer;
+    position: relative;
+    right: 3px;
+}
+.inp-file{
+    
+    width: 1px;
+    background-color:#f4f7fc;
+    color:#f4f7fc;
+    border: none;
+    outline: none;     
+}

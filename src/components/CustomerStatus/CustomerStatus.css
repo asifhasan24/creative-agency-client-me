@@ -1,0 +1,27 @@
+.bg-white{
+    background-color: white;
+}
+.Done-status{
+    padding: 5px 10px;
+    background-color: #c6ffe0;
+    color: #31af6b;
+    border-radius: 5px;
+    border: 1px solid white;
+    font-weight: 500;
+}
+.On-going-status{
+    padding: 5px 10px;
+    background-color: rgb(250, 226, 165);
+    color:rgb(252, 181, 4);
+    border-radius: 5px;
+    border: 1px solid white;
+    font-weight: 500;
+}
+.Pending-status{
+    padding: 5px 10px;
+    background-color:#ffe3e3;
+    color:#ff6060;
+    border-radius: 5px;
+    border: 1px solid white;
+    font-weight: 500;
+}

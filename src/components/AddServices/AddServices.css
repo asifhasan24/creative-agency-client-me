@@ -1,0 +1,40 @@
+.inp-title{
+    height: 40px;
+    width: 350px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+.inp-des{
+    width: 50%;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+
+.btn-submit{
+    padding:5px 10px;
+    border-radius: 10px;
+    background-color: #2aa663;
+    color: white;
+}
+.bg-white{
+    background-color: white;
+}
+.input-file{
+  width: 1px;
+  background-color: white;
+  color:white;
+  border: none;
+  outline: none;
+}
+.file-level
+{
+    background-color: #deffed;
+    color: #169e55;
+    padding: 5px 10px;
+    border-radius: 7px;
+    cursor: pointer;
+    position: relative;
+    right: 3px;
+    
+}

@@ -1,0 +1,35 @@
+.inp-order{
+    height: 40px;
+    width: 65%;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+.inp-details{
+   
+    width: 65%;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+.inp-details::placeholder{
+    text-align: center;
+   
+}
+.inp-price{
+    height: 40px;
+    width: 90px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    text-align: center;
+}
+.btn-image{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #deffed;
+    color:#1ba158;
+    cursor: pointer;
+}
+.btn-order{
+    padding: 10px;
+    border-radius: 10px;
+    
+}

@@ -1,0 +1,17 @@
+.loginBtn
+{
+    width: 300px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    background-color: white;
+    height: 40px;
+    outline: none !important;
+}
+.loginBox{
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 20px;
+    height: 300px;
+    box-shadow: 5px 10px 10px gray;
+    
+}

@@ -1,0 +1,17 @@
+.bg-table{
+    background-color: white;
+    border-radius: 20px;
+}
+.table-header{
+    background-color: #f5f6fa;
+    border-radius: 10px;
+}
+.On-going{
+    color:#ffc14b;
+}
+.Done{
+    color: #58b984;
+}
+.Pending{
+    color: #ff5858;
+}

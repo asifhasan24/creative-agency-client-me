@@ -1,0 +1,33 @@
+  
+.sidebar{
+    background-image: linear-gradient(40deg, white,whitesmoke);
+    position: fixed;
+    
+}
+.sidebar li{
+    margin-bottom: 2em;
+}
+.sidebar li:hover span{
+    display: inline-block;
+    transform: translate(5px);
+}
+.sidebar svg{
+    margin-right: 5px;
+}
+.active{
+    color: #99d4b4 !important;
+}
+@media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar li {float: left;}
+}
+@media screen and (max-width: 400px) {
+    .sidebar li {
+      text-align: center;
+      float: none;
+    }
+  }

@@ -1,45 +1,54 @@
 import React, { useEffect, useState } from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import Loader from 'react-loader-spinner';
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-import SingleService from './SingleService/SingleService';
-
+import slack from '../../../images/logos/slack.png'
+import google from '../../../images/logos/google1.png'
+import uber from '../../../images/logos/uber.png'
+import netflix from '../../../images/logos/netflix.png'
+import airbnb from '../../../images/logos/airbnb.png'
+import ServiceDetails from '../ServiceDetails/ServiceDetails';
+import gif from '../../../images/loading.gif'
+import './Services.css'
 const Services = () => {
-    const [loading, setLoading] = useState(true);
-    const [services, setServices] = useState([]);
-    useEffect( () => {
-        fetch('https://calm-headland-59895.herokuapp.com/allServices')
-        .then( res => res.json())
-        .then ( data => {
-            const newServices = [...data];
-            
-            setServices(newServices)
-            setLoading(false)
-        })
-    }, [])
+    const [service, setService] = useState([])
+    useEffect(() => {
+        fetch('https://enigmatic-dusk-58690.herokuapp.com/services')
+            .then(res => res.json())
+            .then(data => setService(data))
 
-    
+    }, [])
     return (
-        <Container style={{marginBottom: '100px'}}>
-            <h2 style={{textAlign: 'center', marginBottom: '50px'}}>Provide awesome <span className="brandText">services</span></h2>
-            <Row className={`align-items-center`}>
-            {
-                loading ? 
-                    <Loader
-                type="Bars"
-                color="#00BFFF"
-                height={100}
-                width={100}
-        
-             />  : services.map( service => 
-                    <Col md={4} key={service._id}>
-                        <Link to={`/userPanel/${service._id}/orders`}><SingleService serviceInfo={service} /></Link>
-                    </Col>
-                )
-            }
-            </Row>
-        </Container>
+        <div>
+            <div className="row justify-content-center offset-sm-1">
+                <div className="col-12 col-sm-6 col-md-2">
+                    <img className='mr-5 mt-3' height='50px' src={slack} alt="" />
+                </div>
+                <div className="col-12 col-sm-6 col-md-2">
+                    <img className='mr-5 mt-3' height='50px' src={google} alt="" />
+                </div>
+                <div className="col-12 col-sm-6 col-md-2">
+                    <img className='mr-4 mt-3' height='50px' src={uber} alt="" />
+                </div>
+                <div className="col-12 col-sm-6 col-md-2">
+                    <img className='mr-4 mt-3' height='50px' src={netflix} alt="" />
+                </div>
+                <div className="col-12 col-sm-6 col-md-2">
+                    <img className='mr-4 mt-3' height='50px' src={airbnb} alt="" />
+                </div>
+
+            </div>
+            <div className="text-center mt-5 pt-5">
+                <h1 style={{ color: '#404040' }}>Provide awesome <span className="text-color">services</span></h1>
+            </div>
+
+            <div className='d-flex justify-content-center'>
+                <div className="row w-75">
+                    {!service.length && <img src={gif} alt="" />
+                    }
+                    {
+                        service.map(info => <ServiceDetails info={info}></ServiceDetails>)
+                    }
+                </div>
+            </div>
+        </div>
     );
 };
 
